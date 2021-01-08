@@ -17,7 +17,7 @@ client.on("message", (message) => {
     for (i = 0; i < 5; i++) {
       let api = KahootSpam
       var pin = (message.content.replace('!flood ', ''));
-      api.spamWithAnswers(pin, "Hi", 100, 1)
+      api.spamWithAnswers(pin, "Hi", 40, 1)
     }
 
         const embed = new MessageEmbed();

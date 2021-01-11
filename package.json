@@ -9,12 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "better-sqlite3": "^7.1.1",
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.4.1",
     "kahoot-spam": "^1.1.8",
     "mongoose": "^5.10.14",
     "node-gyp": "^7.1.2",
-    "request": "^2.88.2",
+    "request": "^2.88.2"
   }
 }

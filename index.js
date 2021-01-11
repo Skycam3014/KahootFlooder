@@ -1,6 +1,7 @@
 const {Client, MessageEmbed} = require('discord.js');
 const Discord = require("discord.js");
 const client = new Discord.Client();
+var membercount = 0
 const sq = require('./flood');
 const kahoot = require("kahoot-spam")
 

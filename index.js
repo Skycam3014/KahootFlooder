@@ -22,7 +22,7 @@ client.on("message", (message) => {
 
 
   client.on("message", (message) => {
-    if (message.content.startsWith("!help")) {
+    if (message.content.startsWith("!info")) {
           const embed = new MessageEmbed();
           embed.setTitle("Kahoot Flooder Info");
           embed.setColor("#00ffff");

@@ -28,6 +28,15 @@ client.on("message", (message) => {
     }
   });
 
+  client.on("message", (message) => {
+    if (message.content.startsWith("!help")) {
+          const embed = new MessageEmbed();
+          embed.setTitle("Kahoot Flooder");
+          embed.setColor("#00ffff");
+          embed.setDescription("Use !flood (pin) to flood any Kahoot game!");
+          message.channel.send(embed);
+      }
+    });
 
 
 client.login(process.env.BOT_TOKEN);

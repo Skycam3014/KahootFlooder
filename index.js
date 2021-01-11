@@ -12,13 +12,16 @@ client.on("ready", () => {
   client.on("message", (message) => {
     if (message.content.startsWith("!help")) {
 
-  const embed = new MessageEmbed();
-  embed.setTitle("KahootFlood Guide");
-  embed.setColor("#00ffff");
-  embed.setDescription("!flood (game pin goes here) - Flood any Kahoot game with bots");
-  message.channel.send(embed);
+client.on("message", (message) => {
+  if (message.content.startsWith("!help")) {
+        const embed = new MessageEmbed();
+        embed.setTitle("Kahoot Flooder");
+        embed.setColor("#00ffff");
+        embed.setDescription("Use !flood (Game pin goes here) to flood any Kahoot game! \n Use !info to find out more details about the bot and it's development!");
+        message.channel.send(embed);
     }
   });
+
 
 
   client.on("message", (message) => {

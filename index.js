@@ -35,10 +35,10 @@ client.on("ready", () => {
     );
     membercount = guild.memberCount;
   });
-  client.user.setStatus('In Development')
-  client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'In Development', type: 'WATCHING' })
+  client.user.setStatus('dnd')
+  client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'dnd', type: 'WATCHING' })
   setInterval(() => {
-    client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'In Development', type: 'WATCHING' })
+    client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'dnd', type: 'WATCHING' })
   }, 900000);
 });
 

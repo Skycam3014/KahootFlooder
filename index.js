@@ -33,12 +33,12 @@ client.on("ready", () => {
         " | Member Count: " +
         guild.memberCount
     );
-    membercount = guild.memberCount;
+    membercount = membercount + guild.memberCount;
   });
   client.user.setStatus('dnd')
-  client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'dnd', type: 'WATCHING' })
+  client.user.setPresence({ activity: { name: `in chat for ${membercount} users and ${client.guilds.cache.size} servers. Type !help.` }, status: 'dnd', type: 'WATCHING' })
   setInterval(() => {
-    client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'dnd', type: 'WATCHING' })
+    client.user.setPresence({ activity: { name: `in chat for ${membercount} users and ${client.guilds.cache.size} servers. Type !help.` }, status: 'dnd', type: 'WATCHING' })
   }, 900000);
 });
 

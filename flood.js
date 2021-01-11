@@ -14,7 +14,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
   if (message.content.startsWith("!flood")) {
     if (talkedRecently.has(message.author.id)) {
-      message.channel.send("Wait 1 minute before getting typing this again. - " + message.author);
+      message.channel.send('Wait 1 minute before getting typing this again. - ${message.author}');
     } else {
     for (i = 0; i < 5; i++) {
       let api = KahootSpam

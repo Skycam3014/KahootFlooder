@@ -5,6 +5,7 @@ const client = new Discord.Client();
 const kahoot = require("kahoot-spam");
 const { spam } = require('kahoot-spam');
 const KahootSpam = require('kahoot-spam');
+const talkedRecently = new Set();
 
 client.on("ready", () => {
   console.log("Flood Ready!");

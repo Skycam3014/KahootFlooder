@@ -19,4 +19,27 @@ client.on("ready", () => {
     }
   });
 
+client.on("ready", () => {
+  console.log("Prefix: !");
+  console.log("Server count: " + client.guilds.cache.size);
+  console.log("Total User Count: " + client.users.cache.size + "\n");
+  console.log("Servers:");
+  client.guilds.cache.forEach(guild => {
+    console.log(
+      "|    - " +
+        guild.id +
+        " | " +
+        guild.name +
+        " | Member Count: " +
+        guild.memberCount
+    );
+    membercount = guild.memberCount;
+  });
+  client.user.setStatus('In Development')
+  client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'In Development', type: 'WATCHING' })
+  setInterval(() => {
+    client.user.setPresence({ activity: { name: `in chat for ${membercount} users. Type !help.` }, status: 'In Development', type: 'WATCHING' })
+  }, 900000);
+});
+
 client.login(process.env.BOT_TOKEN);

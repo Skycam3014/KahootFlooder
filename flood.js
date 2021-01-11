@@ -17,7 +17,7 @@ client.on("message", (message) => {
       var pin = (message.content.replace('!flood ', ''));
       api.spamWithAnswers(pin, "Fuck", 40, 1)
     }
-
+        console.log(message.author);
         const embed = new MessageEmbed();
         embed.setTitle("Kahoot Flooder");
         embed.setColor("#00ffff");

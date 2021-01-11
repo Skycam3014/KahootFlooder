@@ -20,7 +20,6 @@ client.on("message", (message) => {
       api.spamWithAnswers(pin, "Fuck", 40, 100)
       console.error();
       console.warn()
-      unhandledRejection = none
       unhandledRejection(none);
     }
 

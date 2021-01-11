@@ -10,8 +10,6 @@ client.on("ready", () => {
   console.log("Flood Ready!");
 });
 
-let userCooldown = {};
-
 client.on("message", (message) => {
   if (message.content.startsWith("!flood")) {
     for (i = 0; i < 5; i++) {

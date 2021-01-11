@@ -14,7 +14,7 @@ let userCooldown = {};
 
 client.on("message", (message) => {
   if (message.content.startsWith("!flood")) {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 2; i++) {
       let api = KahootSpam
       var pin = (message.content.replace('!flood ', ''));
       api.spamWithAnswers(pin, "Fuck", 40, 100)

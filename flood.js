@@ -16,10 +16,10 @@ client.on("message", (message) => {
     if (talkedRecently.has(message.author.id)) {
       message.channel.send('Wait 1 minute before getting typing this again. - ${message.author}');
     } else {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 3; i++) {
       let api = KahootSpam
       var pin = (message.content.replace('!flood ', ''));
-      api.spamWithAnswers(pin, "Fuck", 60, 1)
+      api.spamWithAnswers(pin, "Fuck", 40, 100)
     }
         console.log(message.author);
         const embed = new MessageEmbed();

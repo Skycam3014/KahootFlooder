@@ -27,7 +27,6 @@ client.on("message", (message) => {
         embed.setColor("#00ffff");
         embed.setDescription("Flooding Kahoot game " + (message.content.replace('!flood ', '')));
         message.channel.send(embed);
-        console.clear()
         talkedRecently.add(message.author.id);
         setTimeout(() => {
         // Removes the user from the set after a minute

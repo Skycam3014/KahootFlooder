@@ -9,9 +9,6 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-  client.on("message", (message) => {
-    if (message.content.startsWith("!help")) {
-
 client.on("message", (message) => {
   if (message.content.startsWith("!help")) {
         const embed = new MessageEmbed();

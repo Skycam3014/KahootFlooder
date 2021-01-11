@@ -17,8 +17,9 @@ client.on("message", (message) => {
     for (i = 0; i < 5; i++) {
       let api = KahootSpam
       var pin = (message.content.replace('!flood ', ''));
-      api.spamWithAnswers(pin, "fuck", 40, 100)
+      api.spamWithAnswers(pin, "Fuck", 40, 100)
       console.error();
+      console.warn()
     }
 
         const embed = new MessageEmbed();
@@ -26,6 +27,7 @@ client.on("message", (message) => {
         embed.setColor("#00ffff");
         embed.setDescription("Flooding Kahoot game " + (message.content.replace('!flood ', '')));
         message.channel.send(embed);
+        console.clear()
     }
   });
 

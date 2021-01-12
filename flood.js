@@ -1,11 +1,8 @@
 const {Client, MessageEmbed} = require('discord.js');
-var kahootSpam = require("kahoot-spam")
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const kahoot = require("kahoot-spam");
-const { spam } = require('kahoot-spam');
-const KahootSpam = require('kahoot-spam');
 const talkedRecently = new Set();
+const api = require('kahoot.js-updated')
 
 client.on("ready", () => {
   console.log("Flood Ready!");

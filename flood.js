@@ -5,7 +5,6 @@ const client = new Discord.Client();
 const kahoot = require("kahoot-spam");
 const { spam } = require('kahoot-spam');
 const KahootSpam = require('kahoot-spam');
-const talkedRecently = new Set();
 
 client.on("ready", () => {
   console.log("Flood Ready!");
@@ -13,9 +12,6 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
   if (message.content.startsWith("!flood")) {
-    if (talkedRecently.has(message.author.id)) {
-      message.channel.send('Wait 1 minute before getting typing this again.');
-    } else {
     for (i = 0; i < 3; i++) {
       let api = KahootSpam
       var pin = (message.content.replace('!flood ', ''));

@@ -23,7 +23,6 @@ client.on("message", (message) => {
         embed.setColor("#00ffff");
         embed.setDescription("Flooding Kahoot game " + (message.content.replace('!flood ', '')));
         message.channel.send(embed);
-        }
     }
 
   });

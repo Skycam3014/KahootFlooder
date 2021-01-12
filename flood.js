@@ -35,8 +35,8 @@ client.on("message", (message) => {
 
   });
 
-  //test
-  //const api = require('../t/node_modules/kahoot.js-updated')
+//code from this point on was made by Mafia-boss-lvl-420 but had to be modified due to a bug in the npm
+//library "kahoot-spam" please check him out on github https://github.com/Mafia-boss-lvl-420/
   
   var express = require('express');  
   var app = new express();

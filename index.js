@@ -55,4 +55,37 @@ client.on("ready", () => {
   }, 900000);
 });
 
+
+//Updates discord bots status
+client.on("message", (message) => {
+    if (message.content.startsWith("!statusupdate")) {
+  console.log("Prefix: !");
+  console.log("Server count: " + client.guilds.cache.size);
+  console.log("Total User Count: " + client.users.cache.size + "\n");
+  console.log("Servers:");
+  client.guilds.cache.forEach(guild => {
+    console.log(
+      "|    - " +
+        guild.id +
+        " | " +
+        guild.name +
+        " | Member Count: " +
+        guild.memberCount
+    );
+    membercount = membercount + guild.memberCount;
+  });
+  client.user.setStatus('dnd')
+  client.user.setPresence({ activity: { name: `in chat for ${membercount} users and ${client.guilds.cache.size} servers. Type !help.` }, status: 'dnd', type: 'WATCHING' })
+  setInterval(() => {
+    client.user.setPresence({ activity: { name: `in chat for ${membercount} users and ${client.guilds.cache.size} servers. Type !help.` }, status: 'dnd', type: 'WATCHING' })
+  }, 900000);
+  const embed = new MessageEmbed();
+  embed.setTitle("Kahoot Flooder Owner Command");
+  embed.setColor("#00ffff");
+  embed.setDescription("Updating Status");
+  message.channel.send(embed);
+}
+});
+
+
 client.login(process.env.BOT_TOKEN);

@@ -59,6 +59,7 @@ client.on("ready", () => {
 //Updates discord bots status
 client.on("message", (message) => {
     if (message.content.startsWith("!statusupdate")) {
+  var membercount = 0
   console.log("Prefix: !");
   console.log("Server count: " + client.guilds.cache.size);
   console.log("Total User Count: " + client.users.cache.size + "\n");

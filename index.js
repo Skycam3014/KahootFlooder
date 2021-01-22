@@ -14,7 +14,7 @@ client.on("message", (message) => {
         const embed = new MessageEmbed();
         embed.setTitle("Kahoot Bot");
         embed.setColor("#00ffff");
-        embed.setDescription("Use !bot (Game pin goes here) to load any Kahoot game! \n Use !info to find out more details about the bot and it's development! \n This bot will be availble until the end of the month if you want to continue use of this bot you can find the code on github(https://github.com/samleews/KahootFlooder)\n and host it for free on Heroku(https://medium.com/@mason.spr/hosting-a-discord-js-bot-for-free-using-heroku-564c3da2d23f) or on any other service.");
+        embed.setDescription("Use !bot (Game pin goes here) to load any Kahoot game! \n Use !info to find out more details about the bot and it's development! \n This bot will be availble until the end of the month if you want to continue use of this bot you can find the code on github(https://github.com/samleews/KahootFlooderPublic)\n and host it for free on Heroku(https://medium.com/@mason.spr/hosting-a-discord-js-bot-for-free-using-heroku-564c3da2d23f) or on any other service.");
         message.channel.send(embed);
     };
   });

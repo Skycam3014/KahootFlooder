@@ -4,26 +4,34 @@ const client = new Discord.Client();
 const talkedRecently = new Set();
 const api = require('kahoot.js-updated')
 
-client.on("ready", () => {
-  console.log("Flood Ready!");
-}); 
-
 client.on("message", (message) => {
   if (message.content.startsWith("!flood")) {
-    for (i = 0; i < 3; i++) {
-      let api = KahootSpam
-      var pin = (message.content.replace('!flood ', ''));
-      api.spamWithAnswers(pin, "Fuck", 60, 1)
-    }
         console.log(message.author);
         const embed = new MessageEmbed();
-        embed.setTitle("Kahoot Flooder");
+        embed.setTitle("Kahoot Bot");
         embed.setColor("#00ffff");
-        embed.setDescription("Flooding Kahoot game " + (message.content.replace('!flood ', '')));
+        embed.setDescription("This command has been changed to !bot");
         message.channel.send(embed);
     }
 
   });
+
+  client.on("message", (message) => {
+    if (message.content.startsWith("!bot")) {
+      for (i = 0; i < 3; i++) {
+        let api = KahootSpam
+        var pin = (message.content.replace('!bot ', ''));
+        api.spamWithAnswers(pin, "Fuck", 40, 1)
+      }
+          console.log(message.author);
+          const embed = new MessageEmbed();
+          embed.setTitle("Kahoot Bot");
+          embed.setColor("#00ffff");
+          embed.setDescription("Loading Kahoot game " + (message.content.replace('!bot ', '')));
+          message.channel.send(embed);
+      }
+  
+    });
 
 //code from this point on was made by Mafia-boss-lvl-420 but had to be modified due to a bug in the npm
 //library "kahoot-spam" please check him out on github https://github.com/Mafia-boss-lvl-420/

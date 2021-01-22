@@ -12,21 +12,21 @@ client.on("ready", () => {
 client.on("message", (message) => {
   if (message.content.startsWith("!help")) {
         const embed = new MessageEmbed();
-        embed.setTitle("Kahoot Flooder");
+        embed.setTitle("Kahoot Bot");
         embed.setColor("#00ffff");
-        embed.setDescription("Use !flood (Game pin goes here) to flood any Kahoot game! \n Use !info to find out more details about the bot and it's development!");
+        embed.setDescription("Use !bot (Game pin goes here) to load any Kahoot game! \n Use !info to find out more details about the bot and it's development!");
         message.channel.send(embed);
-    }
+    };
   });
 
 
 
   client.on("message", (message) => {
-    if (message.content.startsWith("!info")) {
+    if (message.content.startsWith("!help")) {
           const embed = new MessageEmbed();
-          embed.setTitle("Kahoot Flooder Info");
+          embed.setTitle("Kahoot Bot Info");
           embed.setColor("#00ffff");
-          embed.setDescription("Thanks for inviting KahootFlooder to your discord server. \n This bot is run and developed by LeeBear#2812 and availble on github (https://github.com/samleews/KahootFlooder) \n This bot is also still in development so their may be outages or decreases in performance at times.");
+          embed.setDescription("Thanks for inviting KahootBot to your discord server. \n This bot is run and developed by LeeBear#2812 \n This bot is also still in development so their may be outages or decreases in performance at times. \n This bot provides a free service to allow you to join games with multiple accounts LeeBear#2812 is not responsible for anything you do with \n the free service that has been provided");
           message.channel.send(embed);
       }
     });

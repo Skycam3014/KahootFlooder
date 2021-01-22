@@ -22,11 +22,11 @@ client.on("message", (message) => {
 
 
   client.on("message", (message) => {
-    if (message.content.startsWith("!help")) {
+    if (message.content.startsWith("!info")) {
           const embed = new MessageEmbed();
           embed.setTitle("Kahoot Bot Info");
           embed.setColor("#00ffff");
-          embed.setDescription("Thanks for inviting KahootBot to your discord server. \n This bot is run and developed by LeeBear#2812 \n This bot is also still in development so their may be outages or decreases in performance at times. \n This bot provides a free service to allow you to join games with multiple accounts LeeBear#2812 is not responsible for anything you do with \n the free service that has been provided");
+          embed.setDescription("Thanks for inviting KahootBot to your discord server. \n This bot is run and developed by LeeBear#2812 \n This bot is also still in development so their may be outages or decreases in performance at times. \n This bot provides a free service to allow you to join games with multiple accounts LeeBear#2812 is not responsible for anything you do with \n the free service that has been provided. USE AT YOUR OWN RISK.");
           message.channel.send(embed);
       }
     });
